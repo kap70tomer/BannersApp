@@ -1,19 +1,31 @@
 // (function(){ 
 // @@ Var 'banners'<Array> - Model for the memoriezed banners to easly set to local storage.
 const banners = [];
-// @@ func - createNewBanner, takes in 3 paramethers to create a new 'Banner' element.
-const createNewBanner = (element_id, redirect_link, banner_img, event) => {
-    //Prevent Deafult Submit refresh behavior.
+
+//@@ func - Handle Submit btn clicked event,Getter for form values, Prevent Deafult refresh behavior.
+const onSubmitClicked = (event) => {
     event.preventDefault();
+    // Set banner-list as element for insert children "target".
+    const element_id = "banners-list";
+    // Get form values 
+    let redirect_link = document.getElementById('banner-redirectLink').value;
+    let banner_img = document.getElementById('banner-imgUrl').value;
+    //Call create, Provide functions deps with ui data.
+    createNewBanner(element_id, redirect_link, banner_img);
+};
+
+// @@ func - createNewBanner, takes in 3 paramethers to create a new 'Banner' element.
+const createNewBanner = (element_id, redirect_link, banner_img) => {
     //Banners Factory function returns new Banner HTML Element.
     let be = bannersElementFactory(redirect_link, banner_img);
-    // Push the new banner to the banners array, as Model.
-    banners.push({ redirect_link, banner_img });
     //Insert a banner element to DOM with given id.
     insertBannerByElementId(element_id, be);
     //Clean up func for form fields.
     initializeForm();
+    // Push the new banner to the banners array, as Model.
+    banners.push({ redirect_link, banner_img });
 };
+
 // @@ func - Create a banner DOM element and set 'Click' event listener,
 // return - new banner Element.
 const bannersElementFactory = (redirect_link, banner_img) => {
@@ -54,15 +66,38 @@ const clearBannersOnLocalStorage = () => {
 const loadCachedBanners = () => {
     // Get saved banners from local storage and parse them into an array.
     const cachedBanners = JSON.parse(localStorage.getItem('banners-data')) || [];
-    // Iterate saved banners array.
-    cachedBanners.forEach(({ redirect_link, banner_image }) => {
-        // Populating banners array to be updated with cached banners.
-        banners.push({ redirect_link, banner_image });
-        // Creates a banner element each.
-        let be = bannersElementFactory(redirect_link, banner_image);
-        // Insert each banner To View.
-        insertBannerByElementId('banners-list', be);
-    });
+    if(cachedBanners.length > 0){
+
+        // Iterate saved banners array.
+        cachedBanners.forEach((banner) => {
+            // Populating banners array to be updated with cached banners.
+            banners.push(banner);
+            // Creates a banner element each.
+            let be = bannersElementFactory(banner.redirect_link, banner.banner_img);
+            // Insert each banner To View.
+            insertBannerByElementId('banners-list', be);
+        });
+    }
 };
+
+//Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 
 // }) - " ### TODO - tryed to prevent using Global vars, Costs me subbmiting from form behavior refresh".

@@ -23,7 +23,7 @@
             
             <!-- Banners Upload Form -->
             <form class="form container" name="banner-form"
-                onsubmit="createNewBanner('banners-list', document.getElementById('banner-redirectLink').value, document.getElementById('banner-imgUrl').value, event);">
+                onsubmit="onSubmitClicked(event)">
 
                 <!-- Banners Form Fields -->
                 <div class="form-group">
@@ -54,9 +54,11 @@
         
         <div class="s2 container">
             <h2>Banners List Display</h2>
+            
             <div id='banners-list'>
                 <!-- Display div for Banners -->
             </div>
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
         </div>
     </div>
     <!-- Import of JavaSpript file -->
