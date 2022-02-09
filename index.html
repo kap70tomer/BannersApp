@@ -5,42 +5,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <title>Apptimus Banners</title>
     <!-- Import Custom Styles file. -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body onload="loadCachedBanners()">
-    <div class="main container">
+    <div class="main-container">
         <div class="s1">
-
+            
+            <h2>Banners Generator</h2>
+            
             <!-- Banners Upload Form -->
-            <form class="container" name="banner-form"
+            <form class="form container" name="banner-form"
                 onsubmit="createNewBanner('banners-list', document.getElementById('banner-redirectLink').value, document.getElementById('banner-imgUrl').value, event);">
-                <p>Banners Generator</p>
-                <p>Both Form fields are requierd!</p>
 
                 <!-- Banners Form Fields -->
                 <div class="form-group">
-                    <input type="text" placeholder="Where are we going?.." id="banner-redirectLink" required>
+                    <label>Redirect link URL:</label>
+                    <input class="form-input" type="text" placeholder="Where do you go by Clicking?.."
+                        id="banner-redirectLink" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" placeholder="Image URL Referance.." id="banner-imgUrl" required>
-                </div>
+                    <label>Image URL:</label>
+                    <input class="form-input" type="text" placeholder="Please provide an image url.."
+                        id="banner-imgUrl" required>
 
+                </div>
                 <!-- Submit Form Button -->
-                <input type="submit" class="btn submit" value="Submit">
+                <input type="submit" class="btn submit" id="submit-btn" value="Submit">
 
             </form>
 
-            <input type="button" class="btn save" value="Save Banners to Storage" onclick="saveBannersOnLocalStorage()">
-            <input type="button" class="btn clear" value="Clear Banners Storage" onclick="clearBannersOnLocalStorage()">
+            <div class="nav">
+                <input type="button" class="save-btn sticky" value="Save"
+                onclick="saveBannersOnLocalStorage()">
+                
+                <input type="button" class="clear-btn sticky" value="Clear"
+                onclick="clearBannersOnLocalStorage()">
+            </div>
         </div>
 
-
-        <div class="s2" id='banners-list'>
-            <p class="main-text">Banners List</p>
-            <!-- Display div for Banners -->
+        
+        <div class="s2 container">
+            <h2>Banners List Display</h2>
+            <div id='banners-list'>
+                <!-- Display div for Banners -->
+            </div>
         </div>
     </div>
     <!-- Import of JavaSpript file -->

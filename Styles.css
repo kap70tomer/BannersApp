@@ -1,3 +1,4 @@
+/* Global Styling Vars */
 :root {
     --mainText: rgb(34, 34, 34);
     --seconderyText: rgb(100, 100, 100);
@@ -10,16 +11,47 @@
     --btnColor: rgb(49, 49, 49);
 }
 
-.main{
-    height: 100%;
-    width: 95%;
+html,
+body {
+    min-width: 360px;
+    padding: 0;
     margin: 0;
-    padding: 0;    
+}
+
+body * {
+    transition: 0.3s;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    color: var(--mainText);
+    font-family: 'Russo One', sans-serif;
+    font-weight: 500;
+}
+
+.main{
+    display: grid;
+    min-height: 10em;
+    align-content: center;  
+    text-align: center;
+    
+    
 }
 .container{
-    margin: auto;
-    padding: 2%;
-
+    margin: 0 auto;
+    padding: 1%; 
+}
+.form{
+    width: 80%;
+    background-color: var(--seconderyColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 5px 5px 0 0;
+    -webkit-box-shadow: 2px 0px 20px 2px rgba(0, 0, 0, 0.86);
+    box-shadow: 2px 0px 20px 2px rgba(0, 0, 0, 0.86);
 }
 #banners-list{
     display: flex;
@@ -27,11 +59,79 @@
     flex-wrap: wrap;
 }
 
-input{
-    margin: 10px 20px;
+.s1 {
+    background-color: var(--mainColor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+
+.s2 {
+    background-color: var(--seconderyColor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+
+.main-container {
+    width: 100%;
+    margin: 0 auto;
+}
+.form-input {
+    margin: 10px auto;
+    width: 99%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--seconderyColor);
+    border-radius: 5px;
+    border: 1px solid var(--borderColor);
+    font-size: 14px;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 16px -4px #000000;
+    box-shadow: 0px 0px 16px -4px #000000;  
+}
+#submit-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    background-color: var(--btnColor);
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+#submit-btn:hover {
+    -webkit-box-shadow: 0px 0px 12px -4px #000000;
+    box-shadow: 0px 0px 12px -4px #000000;
+    color: black;
+    background-color: #fff;
+    font-size: medium;
+}
+
+p,
+li,
+span,
+label,
+input,
+textarea {
+    color: var(--seconderyText);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
 }
 
 img{
     margin: 1%;
+    -webkit-box-shadow: 2px 0px 20px 2px rgba(0, 0, 0, 0.86);
+    box-shadow: 2px 0px 20px 2px rgba(0, 0, 0, 0.86);
+    border: 1px solid var(--borderColor);
 }
-
+.nav{
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    background-color: transparent;
+}
+/* 
+.save-btn{
+    border-radius: 25%;
+    border: 1px solid var(--borderColor);
+} */
