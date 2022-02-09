@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,37 +10,41 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body onload="loadCachedBanners()">
     <div class="main container">
-        <!-- Banners Upload Form -->
-        <form
-            class="container" 
-            name="banner-form" 
-            onsubmit="createNewBanner('banners-list', document.getElementById('banner-redirectLink').value, document.getElementById('banner-imgUrl').value, event);">
+        <div class="s1">
 
-            <!-- Banners Form Fields -->
-            <div class="form-group">
-                <input type="text" id="banner-redirectLink" required>
-            </div>
-            
-            <div class="form-group">
-                <input type="text" id="banner-imgUrl" required>
-            </div>
-                        
-            <!-- Submit Form Button -->
-            <input type="submit" class="btn submit" value="Submit"> 
-            
-        </form>
-      
-        <input type="button" class="btn save" value="Save Banners to Storage">
-        <input type="button" class="btn clear" value="Clear Banners Storage">
-        
-        
-        <div id='banners-list'>
+            <!-- Banners Upload Form -->
+            <form class="container" name="banner-form"
+                onsubmit="createNewBanner('banners-list', document.getElementById('banner-redirectLink').value, document.getElementById('banner-imgUrl').value, event);">
+                <p>Banners Generator</p>
+                <p>Both Form fields are requierd!</p>
+
+                <!-- Banners Form Fields -->
+                <div class="form-group">
+                    <input type="text" placeholder="Where are we going?.." id="banner-redirectLink" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Image URL Referance.." id="banner-imgUrl" required>
+                </div>
+
+                <!-- Submit Form Button -->
+                <input type="submit" class="btn submit" value="Submit">
+
+            </form>
+
+            <input type="button" class="btn save" value="Save Banners to Storage" onclick="saveBannersOnLocalStorage()">
+            <input type="button" class="btn clear" value="Clear Banners Storage" onclick="clearBannersOnLocalStorage()">
+        </div>
+
+
+        <div class="s2" id='banners-list'>
+            <p class="main-text">Banners List</p>
             <!-- Display div for Banners -->
         </div>
     </div>
     <!-- Import of JavaSpript file -->
-    <script src="Script.js"></script> 
+    <script src="Script.js"></script>
 </body>
+
 </html>

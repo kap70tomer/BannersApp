@@ -1,0 +1,37 @@
+:root {
+    --mainText: rgb(34, 34, 34);
+    --seconderyText: rgb(100, 100, 100);
+    --borderColor: #818181;
+    --mainColor: rgb(223, 223, 223);
+    --seconderyColor: rgb(255, 255, 255);
+    --themeDotBorder: rgb(56, 56, 56);
+    --previewBg: rgba(255, 249, 206, 0.555);
+    --previewShadowBg: rgb(255, 248, 202);
+    --btnColor: rgb(49, 49, 49);
+}
+
+.main{
+    height: 100%;
+    width: 95%;
+    margin: 0;
+    padding: 0;    
+}
+.container{
+    margin: auto;
+    padding: 2%;
+
+}
+#banners-list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+input{
+    margin: 10px 20px;
+}
+
+img{
+    margin: 1%;
+}
+
