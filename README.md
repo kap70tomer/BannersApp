@@ -4,11 +4,8 @@ Built using: HTML | CSS | JavaScript.
 Banner Generator is an easy to use app,
 To create Banners with!
 
-connect your Image with Redirection Link in no time.
-
 
 ### How to use : 
-
 
 1. Download or Clone this project to you local directory.
 
