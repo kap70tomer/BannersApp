@@ -40,7 +40,7 @@ h5,
 h6,
 strong {
     color: var(--mainText);
-    font-family: 'Russo One', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 500;
 }
 
@@ -61,8 +61,8 @@ strong {
     background-color: var(--seconderyColor);
     border: 1px solid var(--borderColor);
     border-radius: 5px 5px 0 0;
-    -webkit-box-shadow: 2px 0px 20px 2px rgba(0, 0, 0, 0.86);
-    box-shadow: 2px 0px 20px 2px rgba(0, 0, 0, 0.86);
+    -webkit-box-shadow: 2px 0px 12px 2px rgba(0, 0, 0, 0.555);
+    box-shadow: 2px 0px 12px 2px rgba(0, 0, 0, 0.507);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -105,7 +105,7 @@ strong {
     margin: 1px;
     padding: 1px;
     border-radius: 5px;
-    background-color: #fff;
+    background: none;
   
 }
 button{
@@ -123,8 +123,8 @@ button{
     border: 1px solid var(--borderColor);
     font-size: 14px;
     text-align: center;
-    -webkit-box-shadow: 0px 0px 16px -4px #000000;
-    box-shadow: 0px 0px 16px -4px #000000;  
+    -webkit-box-shadow: 0px 0px 4px -4px #00000071;
+    box-shadow: 0px 0px 4px -4px #0000008e;  
 }
 
 
@@ -136,7 +136,7 @@ button{
     color: #fff;
     background-color: var(--btnColor);
     border: none;
-    font-family: 'Russo One', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border-radius: 2px;
     cursor: pointer;
 }
@@ -158,8 +158,8 @@ input {
 
 img{
     margin: 15px;
-    -webkit-box-shadow: 2px 0px 8px 2px rgba(0, 0, 0, 0.86);
-    box-shadow: 2px 0px 8px 2px rgba(0, 0, 0, 0.86);
+    -webkit-box-shadow: 2px 0px 4px 2px rgba(0, 0, 0, 0.61);
+    box-shadow: 2px 0px 4px 2px rgba(0, 0, 0, 0.664);
     border: 1px solid var(--borderColor);
 }
 .nav{
@@ -183,8 +183,8 @@ img{
     cursor: pointer;
     padding: 15px;
     border-radius: 5px;
-    -webkit-box-shadow: 2px 0px 20px 2px rgba(0, 0, 0, 0.86);
-    box-shadow: 2px 0px 20px 2px rgba(0, 0, 0, 0.86);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.575);
+    box-shadow:  0px 2px 2px rgba(0, 0, 0, 0.568);
   }
   
   #topBtn:hover {
