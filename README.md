@@ -6,11 +6,13 @@ connect your Image with Redirection Link in no time.
 
 
 ### How to use : 
-1. download or fork this project to you local directory.
 
-2.go to the local directory, (unzip if needed).
 
-3.run Index.html, Should automatically served to your default browser. 
+1.Download or Fork this project to you local directory.
+
+2.Command 'cd' to navigate into your local directory, where you saved the files. (unzip if needed).
+
+3.Click or 'Run' Index.html file, Should automatically served to your default browser. 
 
 
 ### U can:
@@ -32,3 +34,4 @@ press the Clear icon located at the top right of view.
 
 #main view - Smallscreen
 ![banners Small  2022-02-10 at 12 00 21](https://user-images.githubusercontent.com/65711940/153384015-30258084-b8aa-41d2-b779-80d810e6ce88.jpeg)
+
