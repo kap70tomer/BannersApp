@@ -1,7 +1,9 @@
 # Apptimus Banners Generator App
 
 Built using: HTML | CSS | JavaScript.
-Banner Generator is an easy to use app, To create Banners with!
+Banner Generator is an easy to use app,
+To create Banners with!
+
 connect your Image with Redirection Link in no time.
 
 
