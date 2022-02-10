@@ -16,7 +16,7 @@ connect your Image with Redirection Link in no time.
 3.Click or 'Run' Index.html file, Should automatically served to your default browser. 
 
 
-### U can:
+### User Stories:
 
 ~ Create your New Banners. 
 Paste in you image url and redirec link then push submit button.
