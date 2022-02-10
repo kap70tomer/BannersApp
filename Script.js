@@ -36,6 +36,8 @@ const bannersElementFactory = (redirect_link, banner_img) => {
     //Banner's Styles using js.
     bannerElement.style.height = '320px';
     bannerElement.style.width = '320px';
+    //Set redirect link to show as tooltip.
+    bannerElement.title = "Click me to move here: "+ redirect_link;
     //Add Event listener to invoke redirection by Click on UI.
     bannerElement.addEventListener('click', () => window.open(redirect_link, '_blank'));
     //return the new html Element.
@@ -55,11 +57,13 @@ const initializeForm = () => {
 const saveBannersOnLocalStorage = () => {
     localStorage.setItem('banners-data', JSON.stringify(banners));
     console.log("saved!", JSON.stringify(banners));
+    alert('Your Progress Has been Saved for the next Session!');
 }
 // @@ func - Clear cached banners data from localStorage, Under 'banners-data' Key.
 const clearBannersOnLocalStorage = () => {
     localStorage.removeItem('banners-data');
     console.log("Cleared local storage!", JSON.stringify(localStorage));
+    alert('Data Cleared!');
 }
 
 // @@ func - 'loadCachedBanners' - Load saved bannners from local storage on page load.    
@@ -81,16 +85,16 @@ const loadCachedBanners = () => {
 };
 
 //Get the button
-let mybutton = document.getElementById("myBtn");
+let topbutton = document.getElementById("topBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
+    topbutton.style.display = "block";
   } else {
-    mybutton.style.display = "none";
+    topbutton.style.display = "none";
   }
 }
 

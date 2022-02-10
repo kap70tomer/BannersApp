@@ -35,7 +35,6 @@
                     <label>Image URL:</label>
                     <input class="form-input" type="text" placeholder="Please provide an image url.."
                         id="banner-imgUrl" required>
-
                 </div>
                 <!-- Submit Form Button -->
                 <input type="submit" class="btn submit" id="submit-btn" value="Submit">
@@ -43,11 +42,11 @@
             </form>
 
             <div class="nav">
-                <input type="button" class="save-btn sticky" value="Save"
-                onclick="saveBannersOnLocalStorage()">
+                <button type="button" class="save-btn sticky" title="Save Your Banners Localy" value="Save"
+                onclick="saveBannersOnLocalStorage()"><img class="icon" src="./assets/save.png" alt="save-btn"></button>
                 
-                <input type="button" class="clear-btn sticky" value="Clear"
-                onclick="clearBannersOnLocalStorage()">
+                <button type="button" class="clear-btn sticky" title="Clear Banners Data" value="Clear"
+                onclick="clearBannersOnLocalStorage()"><img class="icon" src="./assets/clear.png" alt="cleare data"> </button>
             </div>
         </div>
 
@@ -58,7 +57,7 @@
             <div id='banners-list'>
                 <!-- Display div for Banners -->
             </div>
-            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+            <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
         </div>
     </div>
     <!-- Import of JavaSpript file -->
