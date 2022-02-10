@@ -30,11 +30,12 @@ press the Clear icon located at the top right of view.
 # Main view - Desktop.
 
 
-![Banners Image 2022-02-10 at 11 45 00](https://user-images.githubusercontent.com/65711940/153381151-958e4fa2-97ad-4f3f-8556-d88c610a0cb0.jpeg)
+![Desktop](https://user-images.githubusercontent.com/65711940/153404083-9daa6413-37c7-45b3-8290-8ddefeb22ec2.jpeg)
+
 
 
 # Main view - Mobile
 
+![mobile](https://user-images.githubusercontent.com/65711940/153404105-bcab052d-5ab6-48df-acf4-6dc5a31c035f.jpeg)
 
-![banners Small  2022-02-10 at 12 00 21](https://user-images.githubusercontent.com/65711940/153384015-30258084-b8aa-41d2-b779-80d810e6ce88.jpeg)
 
